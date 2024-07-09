@@ -1,0 +1,41 @@
+body {
+  background: #141414;
+  color: #ffffff;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.movie-app > .row::-webkit-scrollbar {
+  display: none; 
+}
+
+.image-container{
+  position: relative;
+  transition: transform 0.2s;
+  width: 200px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.image-container:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay{
+  opacity: 0.6;
+}
+
+.overlay{
+  position: absolute;
+  background: black;
+  width: 100%;
+  transition: 0.5 ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
